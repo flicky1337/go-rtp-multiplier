@@ -15,7 +15,7 @@ func generateMultiplier(rtp float64) float64 {
 	t2 := 1 - (rtp / 10000.0)
 	if u < t1 {
 		return 1.0
-	} else if u > t2 {
+	} else if u > t2 || rtp == 1.0 {
 		return 10000.0
 	}
 	return rtp / (1 - u)
